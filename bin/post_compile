@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-echo "Hello from post-compile!"
+find /app/.heroku/python/lib/*/site-packages/spacy/lang -maxdepth 1 -mindepth 1 -type d -iname '??' -not -iname 'en' -exec echo Deleting {} \;
+find /app/.heroku/python/lib/*/site-packages/spacy/lang -maxdepth 1 -mindepth 1 -type d -iname '??' -not -iname 'en' -exec echo rm -rf {} \;
