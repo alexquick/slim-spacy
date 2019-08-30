@@ -1,7 +1,6 @@
-import spacy
-import flask
 import os
 
+import spacy
 from flask import Flask
 
 app = Flask(__name__)
