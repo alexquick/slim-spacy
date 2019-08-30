@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 each-langpack(){
-    find /app/.heroku/python/lib/*/site-packages/spacy/lang -maxdepth 1 -mindepth 1 -type d -iname '??' -not -iname 'en' -exec echo $* \;
+    find /app/.heroku/python/lib/*/site-packages/spacy/lang -maxdepth 1 -mindepth 1 -type d -iname '??' -not -iname 'en' -exec $* \;
 }
 each-langpack echo Deleting {}
 each-langpack rm -rf {}
